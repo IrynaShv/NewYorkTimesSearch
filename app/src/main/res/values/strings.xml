@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NewYorkTimesSearch</string>
+
+    <string-array name="sort_array">
+        <item>Newest</item>
+        <item>Oldest</item>
+    </string-array>
+
+    <string-array name="categories_array">
+        <item>Arts</item>
+        <item>Fashion and Style</item>
+        <item>Sports</item>
+    </string-array>
+</resources>

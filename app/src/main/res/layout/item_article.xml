@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_margin="@dimen/small_padding">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHeadline"
+            tools:text="Rap God"
+            android:theme="@style/HeadingFont"
+            android:padding="@dimen/small_padding"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvByline"
+            tools:text="Rap God"
+            android:theme="@style/BylineFont"
+            android:paddingLeft="@dimen/small_padding" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPublishDate"
+            tools:text="Rap God"
+            android:theme="@style/PublishDateFont"
+            android:padding="@dimen/small_padding" />
+
+        <ImageView
+            android:id="@+id/ivThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:src="@mipmap/ic_launcher"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/small_padding"/>
+    </LinearLayout>
+</LinearLayout>
