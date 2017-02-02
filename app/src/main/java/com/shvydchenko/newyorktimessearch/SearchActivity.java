@@ -20,6 +20,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.shvydchenko.newyorktimessearch.EndlessRecyclerViewScrollListener.EndlessRecyclerViewScrollListener;
@@ -33,6 +35,7 @@ import com.shvydchenko.newyorktimessearch.presenters.SearchPresenter;
 import org.parceler.Parcels;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 public class SearchActivity extends AppCompatActivity implements SearchPresenterInterface {
@@ -101,6 +104,14 @@ public class SearchActivity extends AppCompatActivity implements SearchPresenter
         MenuItem searchItem = menu.findItem(R.id.action_search);
 
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        AutoCompleteTextView searchTextView = (AutoCompleteTextView) searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+
+        try {
+            Field mCursorDrawableRes = TextView.class.getDeclaredField("mCursorDrawableRes");
+            mCursorDrawableRes.setAccessible(true);
+            mCursorDrawableRes.set(searchTextView, R.drawable.cursor);
+        } catch (Exception e) {
+        }
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -181,4 +192,6 @@ public class SearchActivity extends AppCompatActivity implements SearchPresenter
         }
         return isOnline();
     }
+
+
 }

@@ -91,7 +91,7 @@ public class FilterDialogFragment extends DialogFragment implements DatePickerDi
             public void onClick(View v) {
                 LinkedHashMap <String, Boolean> categories = mapCategories();
                 FilterOptions dataToSend = new FilterOptions(selectedSortOrder.toLowerCase(), formattedDate, categories);
-                mListener.onSubmit(Parcels.wrap(dataToSend));
+                 mListener.onSubmit(Parcels.wrap(dataToSend));
             }
         });
     }
