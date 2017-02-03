@@ -52,7 +52,6 @@ public class NetworkManager {
                     try {
                         final String responseData = response.body().string();
                         final JSONArray articlesQueryResults = new JSONObject(responseData).getJSONObject("response").getJSONArray("docs");
-
                         mHandler.postDelayed(new Runnable() {
                             @Override
                             public void run() {

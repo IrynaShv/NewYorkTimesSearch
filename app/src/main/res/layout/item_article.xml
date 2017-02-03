@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="?android:attr/selectableItemBackground"
-    android:layout_margin="@dimen/small_padding">
+    android:layout_margin="@dimen/extra_small_padding">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,7 +33,7 @@
             android:id="@+id/tvPublishDate"
             tools:text="Rap God"
             android:theme="@style/PublishDateFont"
-            android:padding="@dimen/small_padding" />
+            android:padding="@dimen/small_padding"/>
 
         <ImageView
             android:id="@+id/ivThumbnail"

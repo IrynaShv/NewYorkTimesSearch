@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="@dimen/big_padding"
     tools:context="com.shvydchenko.newyorktimessearch.Fragments.FilterDialogFragment">
 
     <LinearLayout
@@ -11,14 +11,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
     <TextView
-        android:layout_width="100dp"
+        android:layout_width="@dimen/dialog_label_width"
         android:layout_height="wrap_content"
-        android:text="Before Date: "/>
-
+        android:text="@string/before_date"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Select before date"
+        android:hint="@string/select_before_date"
         android:id="@+id/etBeforeDate"
         android:focusable="false"
         android:focusableInTouchMode="false"
@@ -30,13 +29,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="@dimen/dialog_label_width"
             android:layout_height="wrap_content"
-            android:text="Sort by: "/>
+            android:text="@string/sort_by"/>
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/spinner_height"
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown" />
     </LinearLayout>
@@ -46,19 +45,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="@dimen/dialog_label_width"
             android:layout_height="wrap_content"
-            android:text="News Desk Values: "/>
+            android:text="@string/news_desk_values"/>
 
         <ListView android:id="@+id/categories_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:numColumns="auto_fit"
             android:choiceMode="multipleChoice"/>
-        </LinearLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"/>
+        android:text="@string/save"/>
 </LinearLayout>

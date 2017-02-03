@@ -11,9 +11,9 @@ import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
@@ -54,7 +54,7 @@ public class SearchActivity extends AppCompatActivity implements SearchPresenter
         setContentView(R.layout.activity_search);
         checkIfOnline();
 
-        filterDialogFragment = null;
+        filterDialogFragment = new FilterDialogFragment();
         currentQuery = null;
         filterOptions = new FilterOptions();
 
@@ -64,7 +64,7 @@ public class SearchActivity extends AppCompatActivity implements SearchPresenter
 
         adapter = new ArticleAdapter(this, articles);
         rvArticles.setAdapter(adapter);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        StaggeredGridLayoutManager gridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

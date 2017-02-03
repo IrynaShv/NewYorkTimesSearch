@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">NewYorkTimesSearch</string>
+    <string name="app_title">New York Times Search</string>
+    <string name="before_date">Before Date: </string>
+    <string name="select_before_date">Select before date</string>
+    <string name="sort_by">Sort by: </string>
+    <string name="news_desk_values">News Desk Values: </string>
+    <string name="save">Save</string>
 
     <string-array name="sort_array">
         <item>Newest</item>
@@ -10,5 +16,7 @@
         <item>Arts</item>
         <item>Fashion and Style</item>
         <item>Sports</item>
+        <item>Dining</item>
+        <item>Politics</item>
     </string-array>
 </resources>
